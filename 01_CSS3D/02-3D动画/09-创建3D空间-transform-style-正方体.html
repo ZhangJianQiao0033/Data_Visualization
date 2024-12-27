@@ -16,11 +16,20 @@
       position: relative;
       width: 100px;
       height: 100px;
-      background-color: skyblue;
+      
       transform-style: preserve-3d;
-      
-      
-      transform: rotateX(-33.5deg) rotateY(45deg) scaleZ(1);
+      transform: rotateX(-33.5deg) rotateY(45deg) scaleZ(2);
+      animation: loop 6s linear infinite;
+    }
+
+    @keyframes loop {
+      0% {
+        transform: rotateX(-33.5deg) rotateY(45deg) scaleZ(2);
+      }
+
+      100% {
+        transform: rotateX(-33.5deg) rotateY(405deg) scaleZ(2);
+      }
     }
 
     .item{
@@ -61,7 +70,7 @@
 </head>
 <body>
   
-  <div class="box">div
+  <div class="box">
     <div class="item top">1</div>
     <div class="item bottom">2</div>
     <div class="item front">3</div>
