@@ -1,0 +1,139 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #2b3a42;
+}
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.webpack-logo {
+  width: 100%;
+  height: 200px;
+  /* border: 1px solid red; */
+  position: relative;
+}
+.webpack-logo .cube-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0px 0px -25px;
+
+  transform-style: preserve-3d;
+  transform: rotateX(-33.5deg) rotateY(45deg);
+  animation: inner-loop 6s linear infinite;
+}
+
+@keyframes inner-loop {
+  0% {
+    transform: rotateX(-33.5deg) rotateY(45deg);
+  }
+
+  50%, 100% {
+    transform: rotateX(-33.5deg) rotateY(405deg);
+  }
+}
+
+
+.webpack-logo .cube-inner li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #175d96;
+  border: 1px solid white;
+}
+
+
+.cube-inner .top {
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.cube-inner .bottom {
+  transform: rotateX(-90deg) translateZ(25px);
+}
+
+.cube-inner .front {
+  transform:  translateZ(25px);
+}
+
+.cube-inner .back {
+  transform: rotateX(180deg)translateZ(25px);
+}
+
+.cube-inner .left {
+  transform:  rotateY(-90deg) translateZ(25px);
+}
+.cube-inner .right {
+  transform:  rotateY(90deg) translateZ(25px);
+}
+
+
+
+.webpack-logo .cube-outer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0px 0px -50px;
+
+  transform-style: preserve-3d;
+  transform: rotateX(-33.5deg) rotateY(45deg);
+
+  animation: outer-loop 6s linear infinite;
+}
+  @keyframes outer-loop {
+    0% {
+      transform: rotateX(-33.5deg) rotateY(45deg);
+    }
+
+    50%, 100% {
+      transform: rotateX(-33.5deg) rotateY(-315deg);
+    }
+  }
+
+.webpack-logo .cube-outer li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(141, 214, 249, 0.5);
+  border: 1px solid white;
+
+}
+
+
+.cube-outer .top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.cube-outer .bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.cube-outer .front {
+  transform:  translateZ(50px);
+}
+
+.cube-outer .back {
+  transform: rotateX(180deg)translateZ(50px);
+}
+
+.cube-outer .left {
+  transform:  rotateY(-90deg) translateZ(50px);
+}
+.cube-outer .right {
+  transform:  rotateY(90deg) translateZ(50px);
+}

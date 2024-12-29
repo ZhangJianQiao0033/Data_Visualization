@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+  
+  let frameCount = 0;
+let lastTime = null;
+
+function draw(timestamp) {
+  if(!lastTime){
+    lastTime = timestamp
+  }
+  frameCount++;
+
+  const elapsed = timestamp - lastTime;
+  if(elapsed>1000){
+    const fps = (frameCount * 1000 / elapsed);
+    console.log(`FPS: ${fps.toFixed(2)}`);
+    frameCount = 0;
+    lastTime = timestamp
+  }
+
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+
+  </script>
+</body>
+</html>
